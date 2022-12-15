@@ -1,0 +1,15 @@
+--2022-12-07 10:26:28--  https://github.com/login/oauth/authorize?client_id=269841
+Résolution de github.com (github.com)… 140.82.121.4
+Connexion à github.com (github.com)|140.82.121.4|:443… connecté.
+requête HTTP transmise, en attente de la réponse… 302 Found
+Emplacement : https://github.com/login?client_id=269841&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D269841 [suivant]
+--2022-12-07 10:26:29--  https://github.com/login?client_id=269841&return_to=%2Flogin%2Foauth%2Fauthorize%3Fclient_id%3D269841
+Réutilisation de la connexion existante à github.com:443.
+requête HTTP transmise, en attente de la réponse… 200 OK
+Taille : non indiqué [text/html]
+Enregistre : ‘authorize?client_id=269841’
+
+authorize?client_id=26984     [<=>                                 ]       0  --.-KB/s               authorize?client_id=26984     [ <=>                                ]  28,96K  --.-KB/s    ds 0,001s  
+
+2022-12-07 10:26:29 (19,7 MB/s) - ‘authorize?client_id=269841’ enregistré [29659]
+

@@ -9,9 +9,22 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\OauthController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 Route::middleware('guest')->group(function () {
+    Route::get('/auth/{provider}/redirect', function ($provider) {
+        if ($provider === 'google') {
+            return Socialite::driver('google')->redirect();
+        } elseif ($provider === 'github') {
+            return Socialite::driver('github')->redirect();
+        }
+    });
+
+    Route::get('/auth/google/callback', [OauthController::class, 'google']);
+    Route::get('/auth/github/callback', [OauthController::class, 'github']);
+
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 

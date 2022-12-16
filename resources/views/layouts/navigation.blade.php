@@ -1,4 +1,4 @@
-<div class="fixed top-0 left-0 my-8 mx-4 py-12 pl-8 bg-gray-50 h-full max-h-[92%] w-52 rounded-lg dark:bg-slate-800">
+<div class="sticky top-8 py-12 pl-8 bg-gray-100 h-[45rem] w-52 rounded-3xl dark:bg-slate-800">
     <div class="relative flex justify-between items-start flex-col w-full h-full ">
         <div class="w-full">
             <div class="flex justify-center items-center pr-8">
@@ -55,7 +55,7 @@
                     <!-- Authentication -->
                     <form method="POST" action="{{ route('logout') }}" class="flex py-2 px-4 w-full">
                         @csrf
-                        <a href="route('logout')" class="flex justify-start items-center w-full" onclick="event.preventDefault();this.closest('form').submit();">
+                        <a href="{{ route('logout') }}" class="flex justify-start items-center w-full" onclick="event.preventDefault();this.closest('form').submit();">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mr-2 w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                             </svg>

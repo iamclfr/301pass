@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    /* PASSWORD */
+    Route::get('/password', [PasswordController::class, 'show'])->name('password.show');
+
+    /* NOTEBOOK */
+    Route::get('/notebook', [NotebookController::class, 'show'])->name('notebook.show');
+
+    /* MEDIAS */
+    Route::get('/medias', [MediasController::class, 'show'])->name('medias.show');
+
+    /* ACCOUNT */
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

@@ -79,6 +79,15 @@
                                         <a href="{{ route('dashboard') }}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                                     </li>
                                     <li>
+                                        <a href="{{ route('password.show') }}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Password</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('notebook.show') }}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">NoteBook</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('medias.show') }}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Medias</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('profile.edit') }}" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account</a>
                                     </li>
                                 </ul>
